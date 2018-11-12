@@ -54,14 +54,14 @@ class TaikyokuController extends Controller
     
     // Route::resource の destroyは、テーブルキー項目に「id」が存在する前提
     // 呼び元でidが判明して、それを取得して、該当のデータを削除する仕組み
-    // idがない or ログインユーザ情報を削除とかになると、使えない
-    public function destroy($id)
+    // idがない (ログインユーザ情報を条件に削除など）になると、使えない
+    public function destroy($name)
     {
         $taikyk = new Taikyoku();
-//        $user = Auth::user();   #ログインユーザ情報を取得
-
-//        $taikyk->destroy($user->name);
-        $taikyk->destroy($id);
+        // 引数のログインユーザ名で削除
+        $taikyk::where('name', $name)->delete();
+//        $taikyk->frameworks->where('name', $name)->delete();
+//        $taikyk->frameworks->destroy($name);
 
         // 遷移先のルートを指定
         return redirect()->route('home');
