@@ -47,3 +47,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //    return 'Hello, World! This is Home!!!';
 //});
 
+// 札マスタ（CSVアップロード）
+Route::get('/huda', 'Omo\HudaController@index')->name('huda');
+Route::post('/huda', 'Omo\HudaController@index')->name('huda');
+Route::post('/import', 'Omo\HudaController@import')->name('import');
+
+
+
+

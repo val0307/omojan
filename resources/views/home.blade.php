@@ -29,10 +29,18 @@
                             </div>
                             <div class="col">
                                 <form method="POST" action="{{ route('rireki') }}">
-                                    {{ csrf_field() }} <!-- CSRFトークン：これを設定しないと、POST先で 419エラーになる -->
-                                            <button type="submit" class="btn btn-primary">
-                                                {{ __('戦歴') }}
-                                            </button>
+                                     @csrf
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('戦歴') }}
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <form method="POST" action="{{ route('huda') }}">
+                                     @csrf
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('札マスタ') }}
+                                    </button>
                                 </form>
                             </div>
                         </div>
