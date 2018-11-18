@@ -37,11 +37,19 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+<<<<<<< HEAD
         // ログイン不要でアクセス可能
 //      $this->middleware('guest');
 
         // ログインしないとアクセス不可
         $this->middleware('auth')->except(['index', 'show']);
+=======
+        // ログイン不要でアクセス可能（逆にログインしてると、homeにリダイレクトされる）
+        $this->middleware('guest');
+
+        // ログインしないとアクセス不可
+//     $this->middleware('auth')->except(['index', 'show']);
+>>>>>>> develop
 
     }
 

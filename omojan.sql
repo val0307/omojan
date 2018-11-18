@@ -14,3 +14,6 @@ left join taikyoku t
 on u.name = t.name
 where t.name is null
 
+
+select * from huda
+
