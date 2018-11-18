@@ -39,9 +39,10 @@ class RegisterController extends Controller
     {
 <<<<<<< HEAD
         // ログイン不要でアクセス可能
-//      $this->middleware('guest');
+        $this->middleware('guest');
 
         // ログインしないとアクセス不可
+<<<<<<< HEAD
         $this->middleware('auth')->except(['index', 'show']);
 =======
         // ログイン不要でアクセス可能（逆にログインしてると、homeにリダイレクトされる）
@@ -50,6 +51,9 @@ class RegisterController extends Controller
         // ログインしないとアクセス不可
 //     $this->middleware('auth')->except(['index', 'show']);
 >>>>>>> develop
+=======
+//        $this->middleware('auth')->except(['index', 'show']);
+>>>>>>> 298edfa55d4ed502ea0b0ef232dc85e07d141a2c
 
     }
 
