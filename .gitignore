@@ -12,3 +12,8 @@ npm-debug.log
 yarn-error.log
 .env
 .phpunit.result.cache
+/public/phpinfo.php
+/nbproject/*
+composer.json
+composer.lock
+omojan.sql

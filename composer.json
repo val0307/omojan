@@ -7,8 +7,14 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
+<<<<<<< Updated upstream
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0"
+=======
+        "laravel/framework": "5.7.13",
+        "laravel/tinker": "^1.0",
+        "maatwebsite/excel": "~2.1.0"
+>>>>>>> Stashed changes
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
