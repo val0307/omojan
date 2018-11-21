@@ -2,6 +2,8 @@ drop table taikyoku;
 
 
 select * from users;
+update users set email = 'takuya.kato.ss@hitachi-systems.com'
+
 select * from taikyoku;
 delete from taikyoku;
 
@@ -14,9 +16,6 @@ left join taikyoku t
 on u.name = t.name
 where t.name is null
 
-<<<<<<< Updated upstream
-=======
-
 select * from huda
 insert into huda values (4,'test4','2018/1/1','2018/1/1')
 insert into huda values (8,'----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----1----+----11','2018/1/1','2018/1/1')
@@ -27,4 +26,6 @@ insert into huda values (12,'----+----1----+----1----+----1----+----1----+----1-
 
 delete from huda where id >= 11
 
->>>>>>> Stashed changes
+
+
+

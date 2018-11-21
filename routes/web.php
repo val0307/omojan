@@ -47,3 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //    return 'Hello, World! This is Home!!!';
 //});
 
+// Validateテスト用
+Route::get('/validate', 'ValidateController@index')->name('valindex');
+Route::post('/validate', 'ValidateController@check')->name('valcheck');
+
