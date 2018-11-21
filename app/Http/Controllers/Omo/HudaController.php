@@ -44,8 +44,17 @@ class HudaController extends Controller
                  return redirect()->back();
              }
 
-             $record = $this->huda->firstOrNew(['huda_name' => $row['huda_name']]);
+             // 指定したオブジェクトが存在する場合、first()で取得(最初のれこーdお取得
+             // 存在しなければインスタンス化する
+             $record = $this->huda->firstOrNew(['huda_name'  => $row['huda_name'],'created_at' => $row['created_at']]);
+//           $record = $this->huda->firstOrNew(['huda_name' => $row['huda_name']]);
+//           $record = new huda();
+             
+             // 読み込んだCSVのレコードの各列の値を、オブジェクトに設定
              $record->huda_name = $row['huda_name'];
+//             $record->created_at = date('Y/m/d H:i',strtotime($row['created_at']));
+           $record->created_at = $row['created_at'];
+             // DBにinsert
              $record->save();
          }
 
@@ -53,7 +62,4 @@ class HudaController extends Controller
         //        return redirect()->route('huda');
          return redirect()->action('Omo\HudaController@index');
      } 
-    
-    
-    
 }

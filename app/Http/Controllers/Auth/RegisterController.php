@@ -52,6 +52,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // Validatorファサードのmakeメソッドで、新しいバリデータインスタンスを生成
+        // makeメソッドの第１引数：バリデーションを行うデータ
+        //              第２引数：そのデータに適用するバリデーションルール
+
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
