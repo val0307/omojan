@@ -17,3 +17,5 @@ yarn-error.log
 composer.json
 composer.lock
 omojan.sql
+/nbproject
+.gitignore

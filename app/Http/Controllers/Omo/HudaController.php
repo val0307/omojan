@@ -62,7 +62,4 @@ class HudaController extends Controller
         //        return redirect()->route('huda');
          return redirect()->action('Omo\HudaController@index');
      } 
-    
-    
-    
 }
