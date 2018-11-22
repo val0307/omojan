@@ -40,7 +40,7 @@ class ValidateController extends Controller
                     'col7' => 'url',
                     'col8' => 'active_url',
                     'col9' => 'date',
-                    'col10' => 'date_format:"Y-m-d":',
+                    'col10' => 'date_format:"Y/m/d"',
                     'col11' => 'before:col9',
                     'col12' => 'after:col9',
                     'col13' => 'integer',
